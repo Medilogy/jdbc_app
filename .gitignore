@@ -51,3 +51,5 @@ fabric.properties
 .idea/httpRequests
 
 db.properties
+
+target/
