@@ -1,0 +1,5 @@
+url=place_your_jdbc_url
+driver=jdbc_driver
+database_name=place_your_db_name
+user=your_user_name
+password=your_password
