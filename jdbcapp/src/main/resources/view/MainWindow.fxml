@@ -6,10 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane xmlns="http://javafx.com/javafx"
+<VBox xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="pl.sda.poznan.controller.MainWindowController"
             prefHeight="400.0" prefWidth="600.0">
-    <Button onAction="#handleClick" >Click me</Button>
+    <Button onAction="#readEmployee" >Read employee</Button>
+    <Button onAction="#insertEmployee" >Insert employee</Button>
 
-</GridPane>
+</VBox>
+

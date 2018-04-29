@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jdbc-intro/jdbc-intro.iml" filepath="$PROJECT_DIR$/jdbc-intro/jdbc-intro.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbcapp/jdbcapp.iml" filepath="$PROJECT_DIR$/jdbcapp/jdbcapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-hibernate-intro/jpa-hibernate-intro.iml" filepath="$PROJECT_DIR$/jpa-hibernate-intro/jpa-hibernate-intro.iml" />
       <module fileurl="file://$PROJECT_DIR$/sda-javapoz6-dbprogramming.iml" filepath="$PROJECT_DIR$/sda-javapoz6-dbprogramming.iml" />
     </modules>
   </component>

@@ -18,13 +18,14 @@ public class DbUtils {
         try {
             properties.load(DbUtils.class.getClassLoader().getResourceAsStream("db.properties"));
         } catch (IOException e) {
-           throw  new RuntimeException("Cannot load db.properties file. Please create this file from db.properties.template");
+            throw new RuntimeException(
+                    "Cannot load db.properties file. Please create this file from db.properties.template");
         }
         try {
             return DriverManager
                     .getConnection(properties.getProperty(DB_URL_PROPERTY_NAME), properties);
         } catch (SQLException e) {
-            throw new RuntimeException("Cannot connect to database " + e.getMessage());
+            throw new RuntimeException("Cannot connect to database" + e.getMessage());
         }
     }
 }

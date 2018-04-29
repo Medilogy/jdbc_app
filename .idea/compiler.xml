@@ -9,12 +9,14 @@
         <module name="jdbc-intro" />
         <module name="jdbcapp" />
         <module name="jdbcintro" />
+        <module name="jpa-hibernate-intro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jdbc-intro" target="1.8" />
       <module name="jdbcapp" target="1.5" />
       <module name="jdbcintro" target="1.5" />
+      <module name="jpa-hibernate-intro" target="1.5" />
       <module name="sda-javapoz6-dbprogramming" target="1.5" />
     </bytecodeTargetLevel>
   </component>

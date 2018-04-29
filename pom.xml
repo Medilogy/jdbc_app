@@ -11,6 +11,7 @@
     <modules>
         <module>jdbc-intro</module>
         <module>jdbcapp</module>
+        <module>jpa-hibernate-intro</module>
     </modules>
 
 
