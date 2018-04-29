@@ -2,10 +2,10 @@ package pl.sda.poznan;
 
 import pl.sda.poznan.model.*;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.Date;
 import java.util.List;
 
@@ -31,6 +31,17 @@ public class Program {
 
         Query query1 = entityManager.createQuery("select price,     name from Product");
         List resultList1 = query1.getResultList();
+
+
+        CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Object> criteriaQuery = criteriaBuilder.createQuery();
+
+        Root<Product> productRoot = criteriaQuery.from(Product.class);
+        criteriaQuery.select(productRoot);
+        criteriaQuery.where(criteriaBuilder.equal(productRoot.get("id"),criteriaBuilder.parameter(Long.class,"productId")));
+        Query query3 = entityManager.createQuery(criteriaQuery);
+        query3.setParameter("productId",2L);
+        Object singleResult2 = query3.getResultList();
     }
 
     private static void seedData(EntityManager entityManager) {
