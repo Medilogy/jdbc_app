@@ -53,3 +53,4 @@ fabric.properties
 db.properties
 
 target/
+persistence.xml
