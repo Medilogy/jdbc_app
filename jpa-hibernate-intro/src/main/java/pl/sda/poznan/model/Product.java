@@ -1,6 +1,8 @@
 package pl.sda.poznan.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Product {
@@ -16,6 +18,15 @@ public class Product {
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "category_id")
     private Category category;
+
+    @ManyToMany
+    @JoinTable(
+            name = "product_order",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "order_id")
+    )
+    private Set<ClientOrder> clientOrders = new HashSet<>();
+
 
     public Long getId() {
         return id;
@@ -47,5 +58,13 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Set<ClientOrder> getClientOrders() {
+        return clientOrders;
+    }
+
+    public void setClientOrders(Set<ClientOrder> clientOrders) {
+        this.clientOrders = clientOrders;
     }
 }
